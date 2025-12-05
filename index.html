@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АНКЕТЫ</title>
+    <link rel="stylesheet" href="/наташа/лабораторная 8/css/style8.css">
+</head>
+<body>
+<form action="anket" method="post">
+    <table>
+        <caption>Анкета web-разработчика</caption>
+        <tr>
+            <td>E-mail</td>
+            <td><input type="email" name="email" id="email1"></td>
+        </tr>
+        <tr>
+            <td>Пароль</td>
+            <td><input type="password" name="pass" id="pass1"></td>
+        </tr>
+        <tr>
+            <td>Пол</td>
+            <td>
+                <input type="radio" name="gender" id="g1" value="1">
+                <label for="g1">Мужчина</label>
+                <input type="radio" name="gender" id="g2" value="2">
+                <label for="g2">Женщина</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Год рождения</td>
+            <td>
+                <select name="year" required>
+                    <option value="">—</option>
+                    <option value="1984">1984</option>
+                    <option value="1985">1985</option>
+                    <option value="1986">1986</option>
+                    <option value="1987">1987</option>
+                    <option value="1988">1988</option>
+                    <option value="1989">1989</option>
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                    <option value="1994">1994</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Знание языков</td>
+            <td>
+                <input type="checkbox" name="language" id="lang1" value="English" checked>
+                <label for="lang1">Английский</label><br>
+                <input type="checkbox" name="language" id="lang2" value="Russian">
+                <label for="lang2">Русский</label><br>
+                <input type="checkbox" name="language" id="lang3" value="German" checked>
+                <label for="lang3">Немецкий</label><br>
+                <input type="checkbox" name="language" id="lang4" value="Spanish">
+                <label for="lang4">Испанский</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea name="description" placeholder="Коротко о себе..."></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Отправить">
+                <button type="reset">Сбросить</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<form action="anket1" method="post">
+    <table>
+        <caption><span class="army-form-title">БРОНИРОВАНИЕ НОМЕРОВ</span></caption>
+
+        <tr>
+            <td>Фамилия и имя</td>
+            <td><input type="text" name="fullname" placeholder="Иванова Анна" required id="fullname"></td>
+        </tr>
+
+        <tr>
+            <td>Дата рождения</td>
+            <td>
+                <select name="day" style="width: 32%; margin-right: 2%;">
+                    <option value="">Д</option>
+                    <script>
+                        for (let d = 1; d <= 31; d++) {
+                            document.write(`<option value="${String(d).padStart(2, '0')}">${d}</option>`);
+                        }
+                    </script>
+                </select>
+
+                <select name="month" style="width: 32%; margin-right: 2%;">
+                    <option value="">М</option>
+                    <option value="01">Янв</option>
+                    <option value="02">Фев</option>
+                    <option value="03">Мар</option>
+                    <option value="04">Апр</option>
+                    <option value="05">Май</option>
+                    <option value="06">Июн</option>
+                    <option value="07">Июл</option>
+                    <option value="08">Авг</option>
+                    <option value="09">Сен</option>
+                    <option value="10">Окт</option>
+                    <option value="11">Ноя</option>
+                    <option value="12">Дек</option>
+                </select>
+
+                <select name="year" style="width: 32%;">
+                    <option value="">Г</option>
+                    <script>
+                        for (let y = 2025; y >= 1990; y--) {
+                            document.write(`<option value="${y}">${y}</option>`);
+                        }
+                    </script>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>ГРАЖДАНСТВО</td>
+            <td>
+                <select name="country" required style="width: 100%;">
+                    <option value="">— Выберите страну —</option>
+                    <option value="KR">🇰🇷 Южная Корея</option>
+                    <option value="US">🇺🇸 США</option>
+                    <option value="RU">🇷🇺 Россия</option>
+                    <option value="JP">🇯🇵 Япония</option>
+                    <option value="TH">🇹🇭 Таиланд</option>
+                    <option value="PH">🇵🇭 Филиппины</option>
+                    <option value="BR">🇧🇷 Бразилия</option>
+                    <option value="MX">🇲🇽 Мексика</option>
+                    <option value="FR">🇫🇷 Франция</option>
+                    <option value="DE">🇩🇪 Германия</option>
+                    <option value="BY">BY РЕСПУБЛИКА БЕЛАРУСЬ</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>НОМЕР</td>
+            <td>
+                <select name="bias" style="width: 100%;">
+                    <option value="">— Не указано —</option>
+                    <option value="Single">Одноместный (Single)</option>
+                    <option value="Twin">Двухместный (Twin / Double)</option>
+                    <option value="Superior">Полулюкс (Superior / Comfort)</option>
+                    <option value="Suite">Люкс (Suite)</option>
+                    <option value="Accessible">Номера для людей с ограниченными возможностями (Accessible)</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <textarea name="why_join" placeholder="ОСОБЫЕ ПОЖЕЛАНИЯ"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Отправить заявку">
+                <button type="reset">Сбросить</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

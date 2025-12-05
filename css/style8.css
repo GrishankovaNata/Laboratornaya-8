@@ -1,0 +1,115 @@
+body {
+margin: 0;
+padding: 0;
+min-height: 100vh;
+background-image: url('/наташа/лабораторная 8/img/Снимок\ экрана\ 2025-11-22\ 141706.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+font-family: Arial, sans-serif;
+}
+form {
+margin-bottom: 40px;
+background: white;
+padding: 15px;
+border-radius: 6px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+width: 700px;
+max-width: 95%;
+margin-left: auto;
+margin-right: auto;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 0 auto;
+border: 1px solid #ddd; /* Замена border="1" */
+}
+td {
+padding: 10px;
+vertical-align: top;
+border: 1px solid #eee; /* Добавлены границы ячеек для наглядности */
+}
+caption {
+text-align: left;
+font-weight: bold;
+padding: 8px;
+background: #f5f5f5;
+border-bottom: 1px solid #ddd;
+}
+.army-form-title {
+color: #8A2BE2;
+font-weight: bold;
+font-size: 1.3em;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+width: 100%;
+padding: 8px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+textarea {
+resize: vertical;
+min-height: 80px;
+}
+label {
+margin-right: 15px;
+white-space: nowrap;
+cursor: pointer;
+}
+.avatar-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+justify-content: flex-start;
+}
+.avatar-option {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.avatar-option img {
+width: 56px;
+height: 56px;
+border-radius: 50%;
+border: 2px solid #ddd;
+margin-bottom: 4px;
+object-fit: cover;
+}
+.avatar-option input[type="radio"] {
+margin: 4px 0 2px;
+}
+.avatar-option small {
+font-size: 0.8em;
+color: #555;
+}
+input[type="submit"],
+button[type="reset"] {
+padding: 10px 20px;
+font-size: 1em;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+input[type="submit"] {
+background-color: #4CAF50;
+color: white;
+}
+button[type="reset"] {
+background-color: #f436db;
+color: white;
+margin-left: 10px;
+}
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+button[type="reset"]:hover {
+background-color: #e630c7;
+}
